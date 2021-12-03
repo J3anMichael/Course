@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization; // imprimir dados globais
 
 namespace Course
 {
@@ -20,9 +21,14 @@ namespace Course
             object obj2 = 4.5f;
             int menorValor = int.MinValue; // menor valor
             int maiorValor = int.MaxValue; // maior valor
+            double saldo = 8.7895;
+            int idade = 24;
 
 
 
+            Console.Write(nome); // vai escrever na mesma linha
+            Console.WriteLine(" e "); // vai escrever na mesma linha
+            Console.Write(obj1); // vai escrever na mesma linha
             Console.WriteLine(gender);
             Console.WriteLine(completo);
             Console.WriteLine(letra);
@@ -37,7 +43,48 @@ namespace Course
             Console.WriteLine(obj2);
             Console.WriteLine(menorValor);
             Console.WriteLine(maiorValor);
+            Console.WriteLine(saldo.ToString("F2")); // vai imprimir com duas casas decimais
+            Console.WriteLine(saldo.ToString("F3", CultureInfo.InvariantCulture)); // vai imprimir com o " . " como separador decimal 
+
+
+            // SAIDA DE DADOS
+
+            // Placeholder Ex:
+            Console.WriteLine("{0} tem {1} anos e tem saldo igual a {2} reais", nome, idade, saldo.ToString("F2", CultureInfo.InvariantCulture));
+
+            // Interpolacao
+            Console.WriteLine($"{nome} tem {idade} anos e tem saldo igual a {saldo:F2} reais");
+
+            // Concatenacao
+            Console.WriteLine(nome + " tem " + idade + " anos e tem saldo igual a " + saldo.ToString("F2") + " reais");
+
+
+
+
+            // EXERCICIO DE FIXACAO
+
+            string produto1 = "Computador";
+            string produto2 = "Mesa de escritorio";
+
+            byte age = 24;
+            int codigo = 5290;
+            char genero = 'M';
+
+            double preco1 = 2100.0;
+            double preco2 = 650.50;
+            double medida = 53.234567;
+
+            Console.WriteLine("Produtos:");
+            Console.WriteLine(produto1 + ", cujo preco e $" + preco1);
+            Console.WriteLine(produto2 + ", cujo preco e $" + preco2);
+
+            Console.WriteLine("Registro: " + idade + " anos, codigo " + codigo + " e genero: " + genero);
+
+            Console.WriteLine("Medida com oito casas decimais: " + medida);
+            Console.WriteLine("Arredondado: " + medida.ToString("F3"));
+            Console.WriteLine("Separador decimal invariant culture: " + medida.ToString("F3", CultureInfo.InvariantCulture));
         }
     }
 }
+
 
