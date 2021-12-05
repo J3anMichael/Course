@@ -83,6 +83,51 @@ namespace Course
             Console.WriteLine("Medida com oito casas decimais: " + medida);
             Console.WriteLine("Arredondado: " + medida.ToString("F3"));
             Console.WriteLine("Separador decimal invariant culture: " + medida.ToString("F3", CultureInfo.InvariantCulture));
+
+
+            Console.WriteLine("--------------------------------------------");
+
+            // OPERADORES DE ATRIBUICAO
+
+            int a = 10;
+            a += 2;
+            Console.WriteLine(a);
+
+            int b = 50;
+            b -= 15;
+            Console.WriteLine(b);
+
+            int c = 30;
+            c *= 2;
+            Console.WriteLine(c);
+
+
+            string f = "ABC";
+            f += "DEF";
+            Console.WriteLine(f);
+
+            Console.WriteLine("-------------------------------");
+
+            // OPERADORES ARITMETICOS / ATRIBUICAO
+
+            // ++ (incrementar valor)
+
+            int valor = 10;
+            valor++;
+            Console.WriteLine(valor);
+
+            int valor2 = 50;
+            valor2--;
+            Console.WriteLine(valor2);
+
+
+            Console.WriteLine("-------------------------------");
+
+            // CONVERSAO IMPLICITA E CASTING
+
+
+
+
         }
     }
 }
