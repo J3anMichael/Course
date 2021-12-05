@@ -127,6 +127,15 @@ namespace Course
 
 
 
+            // CASTING
+
+            int val1 = 5;
+            int val2 = 2;
+
+            double resultado = (double) val1 / val2;
+
+            Console.WriteLine(resultado);
+
 
         }
     }
