@@ -136,6 +136,33 @@ namespace Course
 
             Console.WriteLine(resultado);
 
+            Console.WriteLine("-------------------------------");
+
+            // OPERADORES ARITMETICOS
+
+            int number1 = 3 + 4 * 2;
+            Console.WriteLine(number1);
+
+            int number2 = (3 + 4) * 2;
+            Console.WriteLine(number2);
+
+            int number3 = 17 % 3;
+            Console.WriteLine(number3);
+
+            float number4 = (float) 10 / 8;
+            Console.WriteLine(number4);
+
+
+            // FORMLULA DE BASCARA
+
+            double aa = 1.0, bb = -3.0, cc = -4.0;
+
+            double delta = bb * bb - 4.0 * aa * cc;
+
+            double x1 = (-bb + Math.Sqrt(delta)) / (2.0 * aa);
+
+            Console.WriteLine(delta);
+            Console.WriteLine(x1);
 
         }
     }
